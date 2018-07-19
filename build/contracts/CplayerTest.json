@@ -1,0 +1,97 @@
+{
+  "contractName": "CplayerTest",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058203d05f994426807c4a4faba344b1e15bfb55b08ac4ef32f4f8cc8bf66bbec0f810029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058203d05f994426807c4a4faba344b1e15bfb55b08ac4ef32f4f8cc8bf66bbec0f810029",
+  "sourceMap": "67:25:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:25:1;;;;;;;",
+  "deployedSourceMap": "67:25:1:-;;;;;",
+  "source": "//import \"truffle/Assert.sol\";\nimport \"../contracts/tontine.sol\";\n\ncontract CplayerTest {\n\n}\n\n",
+  "sourcePath": "/home/user/tontine/contracts/tontineTest.sol",
+  "ast": {
+    "absolutePath": "/home/user/tontine/contracts/tontineTest.sol",
+    "exportedSymbols": {
+      "CplayerTest": [
+        609
+      ]
+    },
+    "id": 610,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/user/tontine/contracts/tontine.sol",
+        "file": "../contracts/tontine.sol",
+        "id": 608,
+        "nodeType": "ImportDirective",
+        "scope": 610,
+        "sourceUnit": 607,
+        "src": "31:34:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 609,
+        "linearizedBaseContracts": [
+          609
+        ],
+        "name": "CplayerTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 610,
+        "src": "67:25:1"
+      }
+    ],
+    "src": "31:63:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/user/tontine/contracts/tontineTest.sol",
+    "exportedSymbols": {
+      "CplayerTest": [
+        609
+      ]
+    },
+    "id": 610,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/user/tontine/contracts/tontine.sol",
+        "file": "../contracts/tontine.sol",
+        "id": 608,
+        "nodeType": "ImportDirective",
+        "scope": 610,
+        "sourceUnit": 607,
+        "src": "31:34:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 609,
+        "linearizedBaseContracts": [
+          609
+        ],
+        "name": "CplayerTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 610,
+        "src": "67:25:1"
+      }
+    ],
+    "src": "31:63:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-12T09:00:36.322Z"
+}
