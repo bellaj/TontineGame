@@ -82,7 +82,7 @@ contract Ctontine is Itontine {
     Cplayer.player[] public active_players;
     Cplayer.player[] public eliminated_players;
     mapping(address=>uint) public ping_time;
-    uint256 public indices; //change this to index
+    uint256 public Lindex; //change this to index
 
     Cplayer  Tplayer;
 
@@ -92,12 +92,12 @@ contract Ctontine is Itontine {
     }
 
 
-    function eliminate(address PlayerAddress) public{ ////CORRECT SYTANX
+    function eliminate(address PlayerAddress) public{  
 
       require(now> ping_time[PlayerAddress] +1 days );
       delete Tpension[PlayerAddress]; // filled with zeros
       delete active_players[Tplayer.getplayer(PlayerAddress).id];//maybe add id to structs
-      indices -= Tplayer.getplayer(PlayerAddress).id;
+      Lindex -= Tplayer.getplayer(PlayerAddress).id;
       eliminated_players.push(Tplayer.getplayer(PlayerAddress));
       Tplayer.EditPlayer(msg.sender,0);
 
@@ -132,12 +132,12 @@ contract Ctontine is Itontine {
 
  function join() public payable returns(bool){
     require(Tplayer.exist(msg.sender),"player doesn't exist");
-    require(msg.value>=1 && Tpension[msg.sender]==0,"send higher pension");
+    require(msg.value>=1 ether && Tpension[msg.sender]==0,"send higher pension");
     Tpension[msg.sender]=msg.value;
     Tplayer.EditPlayer(msg.sender,active_players.length);
 
     active_players.push(Tplayer.getplayer(msg.sender));
-    indices +=(active_players.length-1);
+    Lindex +=(active_players.length-1);
     ping_time[msg.sender]=now;
     emit NewActivePlayerEv(msg.sender,now);
     return true;
@@ -145,25 +145,14 @@ contract Ctontine is Itontine {
 
 function ping() public {
 
-//require(isequal(1),"pinged with number different than 1");
 ping_time[msg.sender]=now;
 
 }
-
-function isequal(uint a) pure public returns (bool) {
-        uint x = 0;
-        for (uint i = 0; i < 32; i++) {
-            uint b = uint(msg.data[35 - i]);    //msg.data is of type calldata
-            x += b * 256**i;
-        }
-        return (a == x);
-    }
-
-
+ 
 
 function claimReward() public returns (bool){
             require(remaining_players()==1);
-            active_players[indices].Paddress.transfer(address(this).balance);
+            active_players[Lindex].Paddress.transfer(address(this).balance);
             return true;
 }
 
